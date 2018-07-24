@@ -1,22 +1,32 @@
 # MasterNodeMasterScript
-Shell script to install a [Cropcoin Masternode](https://bitcointalk.org/index.php?topic=2863802.0) on a Linux server running Ubuntu 16.04. Use it on your own risk.  
+Shell script to install a number of Masternodes! Here is the list of current supported Masternodes. 
+
+Please note to run this script you MUST:  
+
+1) **SUBJECT TO CHANGE** Be root (for intial install) - better to login as root then use the sudo command  
+2) Ubuntu 16.04 - I only tested this on that version but I'm sure others may work.  
+3) A VPS server - You can use my referal link here --> https://www.vultr.com/?ref=7415368  
+4) Digital Ocean is another provider you can use instead of Vultr. There are many more but these are very common to use. You can use any size due to the swap file that will be created if your server is below 2GB of memory.  
+5) Optional - There may be other types of servers you can use but not listed here.  
+
 ***
 
-## Installation for v1.1.0.4:
+## Installation for Masternode Master Script:
 ```
-wget -N https://raw.githubusercontent.com/zoldur/CropCoin/master/cropcoin.sh
-bash cropcoin.sh
+wget -N https://raw.githubusercontent.com/nashsclay/MasterNodeMasterScript/master/MasterNodeMasterScript.sh
+chmod +x MasterNodeMasterScript.sh
+./MasterNodeMasterScript.sh
 ```
 ***
 
 ## Multiple MN on one VPS:
 
-It is now possible to run multiple **CropCoin** Master Nodes on the same VPS. Each MN will run under a different user you will choose during installation.  
+It is now possible to run multiple Master Nodes on the same VPS! Each MN will run under a different user you will choose during installation. You will also need a different IP address for each MN. To set this up on vultr, use these directions. **LINK HERE**  
 ***
 
 ## Usage:
 
-For security reasons **CropCoin** is installed under a normal user, usually **cropcoin**, hence you need to **su - cropcoin** before checking:  
+For security reasons all Masternodes are installed under a normal user, usually the coin name is the username, hence you need to **su - coinname** before checking:  
 ```
 CROPUSER=cropcoin #replace cropcoin with the MN username you want to check  
 su - $CROPUSER
