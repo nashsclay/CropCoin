@@ -33,7 +33,7 @@ su - $CROPUSER
 cropcoind masternode status  
 cropcoind getinfo
 ```
-Also, if you want to check/start/stop **cropcoin** daemon for a particular MN, run one of the following commands as **root**:
+Also, if you want to check/start/stop **coinname** daemon for a particular MN, run one of the following commands as **root**:
 ```
 CROPUSER=cropcoin  #replace cropcoin with the MN username you want to check  
 systemctl status $CROPUSER #To check the service is running  
@@ -54,7 +54,7 @@ systemctl start $CROPUSER
 ```
 ***
 
-## Wallet update to 1.1.0.4
+## Wallet update
 Run the following commands as **root** to update **CropCoin** to version **1.1.0.4**
 ```
 cd /tmp
