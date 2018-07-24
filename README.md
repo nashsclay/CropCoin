@@ -67,6 +67,8 @@ mv cropcoind /usr/local/bin
 for crop in $(grep -l cropcoind /etc/systemd/system/*.service | awk -F"/" '{print $NF}'); do systemctl start $crop; done
 ```
 
+***
+
 ## Acknowledgements:
 
 Script base code forked from Zoldur: https://github.com/zoldur/
